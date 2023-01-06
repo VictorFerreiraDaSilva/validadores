@@ -4,23 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" type="text/css">
     <title>Validador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>Validador</h1>
-    <div id="divCartao">
+    <h1 class="titulo">Validadores</h1>
+    <div class="cards">
+    <div id="divCartao" class="card">
         <h2>Cartão de Crédito:</h2>
+        <br />
         <label for="numCartao">Número do Cartão:</label>
         <input type="text" id="numCartao" placeholder="0000 0000 0000 0000">
         <input type="submit" id="btnCartao" value="Validar" onclick="validarCartao()">
+        <br /><br />
         <label for="btnCartao" id="lblCartao"></label>
     </div>
-    <div id="divCPF">
+    <div id="divCPF" class="card">
         <h2>CPF:</h2>
+        <br />
         <label for="numCPF">Número do CPF:</label>
-        <input type="text" id="numCPF">
+        <input type="text" id="numCPF" placeholder="000.000.000-00">
         <input type="submit" id="btnCPF" value="Validar" onclick="validarCPF()">
+        <br /><br />
         <label for="btnCPF" id="lblCPF"></label>
+    </div>
     </div>
     <script src="script.js"></script>
   </body>

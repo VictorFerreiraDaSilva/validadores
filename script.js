@@ -30,8 +30,8 @@ function validarCPF() {
   numCPF = numCPF.replace(/\s/g, "");
   numCPF = numCPF.replace(/\./g, "");
   numCPF = numCPF.replace(/\-/g, "");
-  let primeiroValidador = numCPF[9];
-  let segundoValidador = numCPF[10];
+  let primeiroValidador;
+  let segundoValidador;
   let multiplicador = 11;
   let soma1 = 0,
     soma2 = 0;
@@ -49,4 +49,31 @@ function validarCPF() {
   String(primeiroValidador) + String(segundoValidador)
     ? (document.getElementById("lblCPF").innerHTML = "Válido")
     : (document.getElementById("lblCPF").innerHTML = "Inválido");
+}
+
+function validarRG() {
+  let numRG = document.getElementById("numRG").value;
+  numRG = numRG.replace(/\s/g, "");
+  numRG = numRG.replace(/\./g, "");
+  numRG = numRG.replace(/\-/g, "");
+  let soma = 0;
+  let multiplicadores = [2, 3, 4, 5, 6, 7, 8, 9];
+  let resto, digitoEsperado;
+
+  for (let i = 0; i < 8; i++) {
+    soma += numRG[i] * multiplicadores[i];
+  }
+  console.log(soma);
+  resto = soma % 11;
+  digitoEsperado = 11 - resto;
+  digitoEsperado === 10
+    ? (digitoEsperado = "X")
+    : (digitoEsperado = digitoEsperado);
+  digitoEsperado === 11
+    ? (digitoEsperado = 0)
+    : (digitoEsperado = digitoEsperado);
+  digitoEsperado == numRG[8]
+    ? (document.getElementById("lblRG").innerHTML = "Válido")
+    : (document.getElementById("lblRG").innerHTML = "Inválido");
+  console.log(digitoEsperado);
 }

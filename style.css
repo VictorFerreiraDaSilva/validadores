@@ -43,10 +43,43 @@ background: linear-gradient(0deg, rgba(0,8,47,1) 0%, #fc466b 100%);
     border-radius: 8px;
     padding:16px;
     transition: .3s;
-    padding-bottom: 50px;
+    padding-bottom: 60px;
 }
 
+.btn{
+    
+    font-size: 16px;
+    color: #fff;
+    background-color: #fc466b;
+    padding: 10px 24px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    border-radius: 8px;
+    transition : 1000ms;
+    transform: translateY(0);
+    cursor: pointer;
+}
+
+.btn:hover{
+    transition : 600ms;
+    padding: 10px 48px;
+    transform : translateY(-0px);
+    background-color: rgba(0,8,47,1);
+    color: white;
+    border: solid 2px  #fc466b;
+    font-weight: bold;
+}
 
 .texto{
     font-size: 16px;
+    font-weight: bold;
+}
+
+.txtBox{
+    font-weight: normal;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #fc466b;
+    outline: none;
+    background: transparent;    
 }

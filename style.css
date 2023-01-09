@@ -4,7 +4,17 @@ body{
     font-family: 'Ubuntu', sans-serif;
     text-align: center;
     padding: 16px;
-    background: #eaffff;
+    /*background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(20,9,121,1) 35%, rgba(0,249,255,1) 100%);
+    */
+    background: rgba(0, 8, 47, 0.685);
+background: linear-gradient(0deg, rgba(0,8,47,1) 0%, #fc466b 100%);
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+
+    
 }
 
 .titulo{
@@ -13,7 +23,7 @@ body{
 
 .cards{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     gap: 20px;  
 }
 
@@ -22,12 +32,21 @@ body{
 }
 
 .card{
-    -webkit-box-shadow: 2px 2px 8px -2px rgba(0,0,0,0.75);
+    /*-webkit-box-shadow: 2px 2px 8px -2px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 2px 8px -2px rgba(0,0,0,0.75);
-    box-shadow: 2px 2px 8px -2px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 8px -2px rgba(0,0,0,0.75);*/
+    -webkit-box-shadow: 4px 8px 32px 0px rgba(255,60,172,1);
+    -moz-box-shadow: 4px 8px 32px 0px rgba(255,60,172,1);
+    box-shadow: 4px 8px 32px 0px rgba(255,60,172,1);
     height: 200px;
-    background-color: #cefcff;
+    background-color: rgba(0, 8, 47, 0.856);
     border-radius: 8px;
     padding:16px;
     transition: .3s;
+    padding-bottom: 50px;
+}
+
+
+.texto{
+    font-size: 16px;
 }

@@ -57,11 +57,10 @@ function validarRG() {
   numRG = numRG.replace(/\./g, "");
   numRG = numRG.replace(/\-/g, "");
   let soma = 0;
-  let multiplicadores = [2, 3, 4, 5, 6, 7, 8, 9];
   let resto, digitoEsperado;
 
   for (let i = 0; i < 8; i++) {
-    soma += numRG[i] * multiplicadores[i];
+    soma += numRG[i] * (i + 2);
   }
   console.log(soma);
   resto = soma % 11;
